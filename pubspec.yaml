@@ -1,0 +1,36 @@
+name: transitive_fonts_demo
+description: A new Flutter project.
+publish_to: 'none' 
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  # font package import:
+  awesome_fonts_collection:
+    path: ./packages/awesome_fonts_collection
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  # you have to declare the same font here again!
+  # otherwise, styling won't be applied
+  # (you can comment out these lines and check)
+  fonts:
+    - family: Ginger
+      fonts:
+        - asset: packages/awesome_fonts_collection/fonts/Yellow-Ginger.ttf
